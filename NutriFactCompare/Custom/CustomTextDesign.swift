@@ -16,47 +16,56 @@ struct CustomTextDesign: ViewModifier {
             .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)
     }
 }
-    
-struct CustomTextDesign1: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .frame(width: 120, height: 50)
-            .background(Color.white)
-            .cornerRadius(15)
-            .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)
-    }
-}
 
-struct CustomTextDesign2: ViewModifier {
+struct CustomTextBodyDesign: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.caption)
-            .multilineTextAlignment(.center)
-            .padding(5)
-            .frame(maxWidth: .infinity)
-            .background(Color.white)
-            .cornerRadius(15)
-            .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)
-    }
-}
-
-struct CustomTextDesign3: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.caption)
-            .lineLimit(2)
-            .multilineTextAlignment(.center)
+            .font(.body)
             .frame(maxWidth: .infinity)
             .background(Color.white)
     }
 }
 
-struct CustomTextDesign4: ViewModifier {
+struct CustomTextSymbolDesign: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 22))
+            .frame(maxWidth: .infinity)
+            .background(Color.white)
+    }
+}
+
+struct CustomTextTitleDesign: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.title)
+            .frame(maxWidth: .infinity)
+            .background(Color.white)
+    }
+}
+
+struct CustomTextTitle2Design: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.title2)
-            .foregroundColor(.black)
-            .multilineTextAlignment(.center)
+            .frame(maxWidth: .infinity)
+            .background(Color.white)
+    }
+}
+
+struct CustomTextTitle3Design: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.title3)
+            .frame(maxWidth: .infinity)
+            .background(Color.white)
+    }
+}
+
+struct CustomTextLargeTitleDesign: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
             .frame(maxWidth: .infinity)
             .background(Color.white)
     }
