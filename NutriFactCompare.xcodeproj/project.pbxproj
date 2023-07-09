@@ -24,6 +24,8 @@
 		DACF2DAE2A5A4131002F411B /* CustomTextDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DAD2A5A4131002F411B /* CustomTextDesign.swift */; };
 		DACF2DB12A5A41CA002F411B /* ColorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DB02A5A41CA002F411B /* ColorProtocols.swift */; };
 		DACF2DB32A5A426C002F411B /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DB22A5A426C002F411B /* CustomTextFieldStyle.swift */; };
+		DACF2DB52A5A6761002F411B /* ServingSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DB42A5A6761002F411B /* ServingSize.swift */; };
+		DACF2DBA2A5A732B002F411B /* EqualizeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DB92A5A732B002F411B /* EqualizeUnit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		DACF2DAD2A5A4131002F411B /* CustomTextDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextDesign.swift; sourceTree = "<group>"; };
 		DACF2DB02A5A41CA002F411B /* ColorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProtocols.swift; sourceTree = "<group>"; };
 		DACF2DB22A5A426C002F411B /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
+		DACF2DB42A5A6761002F411B /* ServingSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServingSize.swift; sourceTree = "<group>"; };
+		DACF2DB92A5A732B002F411B /* EqualizeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizeUnit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 		DACF2DA22A5A39C9002F411B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DACF2DB42A5A6761002F411B /* ServingSize.swift */,
+				DACF2DB92A5A732B002F411B /* EqualizeUnit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,10 +335,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACF2DB52A5A6761002F411B /* ServingSize.swift in Sources */,
 				DACF2DB12A5A41CA002F411B /* ColorProtocols.swift in Sources */,
 				DACF2D702A572FA5002F411B /* NutriFactCompareApp.swift in Sources */,
 				DACF2DB32A5A426C002F411B /* CustomTextFieldStyle.swift in Sources */,
 				DACF2DA52A5A39E8002F411B /* MainVIew.swift in Sources */,
+				DACF2DBA2A5A732B002F411B /* EqualizeUnit.swift in Sources */,
 				DACF2D722A572FA5002F411B /* Persistence.swift in Sources */,
 				DACF2DAE2A5A4131002F411B /* CustomTextDesign.swift in Sources */,
 				DACF2DAC2A5A40BE002F411B /* CustomButtonView.swift in Sources */,
