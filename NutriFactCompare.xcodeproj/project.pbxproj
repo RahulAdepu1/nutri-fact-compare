@@ -16,6 +16,14 @@
 		DACF2D872A572FA7002F411B /* NutriFactCompareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2D862A572FA7002F411B /* NutriFactCompareTests.swift */; };
 		DACF2D912A572FA7002F411B /* NutriFactCompareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2D902A572FA7002F411B /* NutriFactCompareUITests.swift */; };
 		DACF2D932A572FA7002F411B /* NutriFactCompareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2D922A572FA7002F411B /* NutriFactCompareUITestsLaunchTests.swift */; };
+		DACF2DA02A5A39B8002F411B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2D9F2A5A39B8002F411B /* OnboardingView.swift */; };
+		DACF2DA52A5A39E8002F411B /* MainVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DA42A5A39E8002F411B /* MainVIew.swift */; };
+		DACF2DA72A5A39FF002F411B /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DA62A5A39FF002F411B /* ResultView.swift */; };
+		DACF2DA92A5A3A6C002F411B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DA82A5A3A6C002F411B /* MainViewModel.swift */; };
+		DACF2DAC2A5A40BE002F411B /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DAB2A5A40BE002F411B /* CustomButtonView.swift */; };
+		DACF2DAE2A5A4131002F411B /* CustomTextDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DAD2A5A4131002F411B /* CustomTextDesign.swift */; };
+		DACF2DB12A5A41CA002F411B /* ColorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DB02A5A41CA002F411B /* ColorProtocols.swift */; };
+		DACF2DB32A5A426C002F411B /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DB22A5A426C002F411B /* CustomTextFieldStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		DACF2D8C2A572FA7002F411B /* NutriFactCompareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriFactCompareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACF2D902A572FA7002F411B /* NutriFactCompareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriFactCompareUITests.swift; sourceTree = "<group>"; };
 		DACF2D922A572FA7002F411B /* NutriFactCompareUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriFactCompareUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DACF2D9F2A5A39B8002F411B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		DACF2DA42A5A39E8002F411B /* MainVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIew.swift; sourceTree = "<group>"; };
+		DACF2DA62A5A39FF002F411B /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		DACF2DA82A5A3A6C002F411B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		DACF2DAB2A5A40BE002F411B /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		DACF2DAD2A5A4131002F411B /* CustomTextDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextDesign.swift; sourceTree = "<group>"; };
+		DACF2DB02A5A41CA002F411B /* ColorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProtocols.swift; sourceTree = "<group>"; };
+		DACF2DB22A5A426C002F411B /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +117,11 @@
 			children = (
 				DACF2D6F2A572FA5002F411B /* NutriFactCompareApp.swift */,
 				DACF2D712A572FA5002F411B /* Persistence.swift */,
+				DACF2DA32A5A39D4002F411B /* ViewModel */,
+				DACF2DA22A5A39C9002F411B /* Model */,
+				DACF2DA12A5A39BD002F411B /* View */,
+				DACF2DAF2A5A41B9002F411B /* Protocols */,
+				DACF2DAA2A5A40A8002F411B /* Custom */,
 				DACF2D762A572FA5002F411B /* ContentView.swift */,
 				DACF2D782A572FA7002F411B /* Assets.xcassets */,
 				DACF2D7A2A572FA7002F411B /* NutriFactCompare.entitlements */,
@@ -133,6 +154,49 @@
 				DACF2D922A572FA7002F411B /* NutriFactCompareUITestsLaunchTests.swift */,
 			);
 			path = NutriFactCompareUITests;
+			sourceTree = "<group>";
+		};
+		DACF2DA12A5A39BD002F411B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DACF2D9F2A5A39B8002F411B /* OnboardingView.swift */,
+				DACF2DA42A5A39E8002F411B /* MainVIew.swift */,
+				DACF2DA62A5A39FF002F411B /* ResultView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DACF2DA22A5A39C9002F411B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DACF2DA32A5A39D4002F411B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DACF2DA82A5A3A6C002F411B /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DACF2DAA2A5A40A8002F411B /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				DACF2DAB2A5A40BE002F411B /* CustomButtonView.swift */,
+				DACF2DAD2A5A4131002F411B /* CustomTextDesign.swift */,
+				DACF2DB22A5A426C002F411B /* CustomTextFieldStyle.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		DACF2DAF2A5A41B9002F411B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DACF2DB02A5A41CA002F411B /* ColorProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +329,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACF2DB12A5A41CA002F411B /* ColorProtocols.swift in Sources */,
 				DACF2D702A572FA5002F411B /* NutriFactCompareApp.swift in Sources */,
+				DACF2DB32A5A426C002F411B /* CustomTextFieldStyle.swift in Sources */,
+				DACF2DA52A5A39E8002F411B /* MainVIew.swift in Sources */,
 				DACF2D722A572FA5002F411B /* Persistence.swift in Sources */,
+				DACF2DAE2A5A4131002F411B /* CustomTextDesign.swift in Sources */,
+				DACF2DAC2A5A40BE002F411B /* CustomButtonView.swift in Sources */,
 				DACF2D772A572FA5002F411B /* ContentView.swift in Sources */,
+				DACF2DA02A5A39B8002F411B /* OnboardingView.swift in Sources */,
+				DACF2DA72A5A39FF002F411B /* ResultView.swift in Sources */,
 				DACF2D752A572FA5002F411B /* NutriFactCompare.xcdatamodeld in Sources */,
+				DACF2DA92A5A3A6C002F411B /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
