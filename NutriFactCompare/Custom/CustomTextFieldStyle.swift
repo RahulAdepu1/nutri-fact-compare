@@ -13,7 +13,7 @@ struct CustomTextFieldStyle: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .padding(.leading, 20)
+            .multilineTextAlignment(.center)
             .frame(maxWidth: .infinity, maxHeight: 50)
             .keyboardType(.decimalPad)
             .background(colorTheme.primary)

@@ -57,7 +57,6 @@ struct CustomTextTitle3Design: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.title3)
-            .frame(maxWidth: .infinity)
             .background(Color.white)
     }
 }

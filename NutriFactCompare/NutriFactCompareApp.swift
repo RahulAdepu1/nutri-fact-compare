@@ -9,13 +9,14 @@ import SwiftUI
 
 @main
 struct NutriFactCompareApp: App {
-    
+    @StateObject var mainViewModel: MainViewModel = MainViewModel()
 
     var body: some Scene {
         WindowGroup {
             NavigationStack{
-                ContentView()
+                MainVIew()
             }
+            .environmentObject(mainViewModel)
         }
     }
 }

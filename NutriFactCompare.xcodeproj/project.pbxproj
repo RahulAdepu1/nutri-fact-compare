@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA286C882A5CC37D00CB6CE8 /* CustomBlockDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA286C872A5CC37D00CB6CE8 /* CustomBlockDesign.swift */; };
+		DA286C8C2A5D237700CB6CE8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA286C8B2A5D237700CB6CE8 /* StringExtension.swift */; };
 		DACF2D702A572FA5002F411B /* NutriFactCompareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2D6F2A572FA5002F411B /* NutriFactCompareApp.swift */; };
 		DACF2D722A572FA5002F411B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2D712A572FA5002F411B /* Persistence.swift */; };
 		DACF2D752A572FA5002F411B /* NutriFactCompare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DACF2D732A572FA5002F411B /* NutriFactCompare.xcdatamodeld */; };
@@ -26,6 +28,7 @@
 		DACF2DB32A5A426C002F411B /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DB22A5A426C002F411B /* CustomTextFieldStyle.swift */; };
 		DACF2DB52A5A6761002F411B /* ServingSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DB42A5A6761002F411B /* ServingSize.swift */; };
 		DACF2DBA2A5A732B002F411B /* EqualizeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DB92A5A732B002F411B /* EqualizeUnit.swift */; };
+		DACF2DBC2A5B5A97002F411B /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF2DBB2A5B5A97002F411B /* DoubleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA286C872A5CC37D00CB6CE8 /* CustomBlockDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlockDesign.swift; sourceTree = "<group>"; };
+		DA286C8B2A5D237700CB6CE8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DACF2D6C2A572FA5002F411B /* NutriFactCompare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriFactCompare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACF2D6F2A572FA5002F411B /* NutriFactCompareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriFactCompareApp.swift; sourceTree = "<group>"; };
 		DACF2D712A572FA5002F411B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 		DACF2DB22A5A426C002F411B /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
 		DACF2DB42A5A6761002F411B /* ServingSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServingSize.swift; sourceTree = "<group>"; };
 		DACF2DB92A5A732B002F411B /* EqualizeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizeUnit.swift; sourceTree = "<group>"; };
+		DACF2DBB2A5B5A97002F411B /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 			children = (
 				DACF2D6F2A572FA5002F411B /* NutriFactCompareApp.swift */,
 				DACF2D712A572FA5002F411B /* Persistence.swift */,
+				DACF2DBD2A5B5A9C002F411B /* Extension */,
 				DACF2DA32A5A39D4002F411B /* ViewModel */,
 				DACF2DA22A5A39C9002F411B /* Model */,
 				DACF2DA12A5A39BD002F411B /* View */,
@@ -193,6 +200,7 @@
 				DACF2DAB2A5A40BE002F411B /* CustomButtonView.swift */,
 				DACF2DAD2A5A4131002F411B /* CustomTextDesign.swift */,
 				DACF2DB22A5A426C002F411B /* CustomTextFieldStyle.swift */,
+				DA286C872A5CC37D00CB6CE8 /* CustomBlockDesign.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -203,6 +211,15 @@
 				DACF2DB02A5A41CA002F411B /* ColorProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DACF2DBD2A5B5A9C002F411B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DACF2DBB2A5B5A97002F411B /* DoubleExtension.swift */,
+				DA286C8B2A5D237700CB6CE8 /* StringExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,12 +352,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACF2DBC2A5B5A97002F411B /* DoubleExtension.swift in Sources */,
 				DACF2DB52A5A6761002F411B /* ServingSize.swift in Sources */,
+				DA286C882A5CC37D00CB6CE8 /* CustomBlockDesign.swift in Sources */,
 				DACF2DB12A5A41CA002F411B /* ColorProtocols.swift in Sources */,
 				DACF2D702A572FA5002F411B /* NutriFactCompareApp.swift in Sources */,
 				DACF2DB32A5A426C002F411B /* CustomTextFieldStyle.swift in Sources */,
 				DACF2DA52A5A39E8002F411B /* MainVIew.swift in Sources */,
 				DACF2DBA2A5A732B002F411B /* EqualizeUnit.swift in Sources */,
+				DA286C8C2A5D237700CB6CE8 /* StringExtension.swift in Sources */,
 				DACF2D722A572FA5002F411B /* Persistence.swift in Sources */,
 				DACF2DAE2A5A4131002F411B /* CustomTextDesign.swift in Sources */,
 				DACF2DAC2A5A40BE002F411B /* CustomButtonView.swift in Sources */,

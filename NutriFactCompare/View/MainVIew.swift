@@ -9,21 +9,38 @@ import SwiftUI
 
 struct MainVIew: View {
     
-    @StateObject private var mainViewModel: MainViewModel = MainViewModel()
+    @EnvironmentObject var mainViewModel: MainViewModel
     
     var body: some View {
         NavigationStack {
             VStack{
                 VStack(spacing: 20) {
+                    HStack {
+                        Spacer()
+                        
+                        Picker(selection: $mainViewModel.servingSizeUnitType,
+                               label: Text("Picker")
+                        ) {
+                            ForEach(ServingSizeUnitType.servingSizeUnitList) { unit in
+                                Text(unit.type).tag(unit.type)
+                            }
+                        }
+                        .pickerStyle(MenuPickerStyle())
+                        .modifier(CustomPickerViewBlockDesign())
+                    }
+                    .padding(.horizontal, 20)
+                    
+                    // Title
                     HStack(spacing: 20) {
                         Text("")
-                            .frame(maxWidth: .infinity, maxHeight: 50)
+                            .frame(maxWidth: .infinity)
                         Text("Item 1")
                             .modifier(CustomTextDesign())
                         Text("Item 2")
                             .modifier(CustomTextDesign())
                     }
                     
+                    // Price
                     HStack(spacing: 20) {
                         Text("Price")
                             .modifier(CustomTextDesign())
@@ -33,15 +50,40 @@ struct MainVIew: View {
                             .modifier(CustomTextFieldStyle())
                     }
                     
+                    // Serving Size
                     HStack(spacing: 20) {
                         Text("Serv. Size")
                             .modifier(CustomTextDesign())
-                        TextField("size", text: $mainViewModel.servSize1)
-                            .modifier(CustomTextFieldStyle())
-                        TextField("size", text: $mainViewModel.servSize2)
-                            .modifier(CustomTextFieldStyle())
+                        VStack {
+                            TextField("size", text: $mainViewModel.servSize1)
+                                .modifier(CustomTextFieldStyle())
+                            Picker(selection: $mainViewModel.servUnit1,
+                                   label: Text("Picker")
+                            ) {
+                                ForEach(mainViewModel.serveUnit(), id:\.self) { unit in
+                                    Text(unit).tag(unit)
+                                }
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                            .modifier(CustomPickerViewBlockDesign())
+                        }
+                        VStack {
+                            TextField("size", text: $mainViewModel.servSize2)
+                                .modifier(CustomTextFieldStyle())
+                            Picker(selection: $mainViewModel.servUnit2,
+                                   label: Text("Picker")
+                            ) {
+                                ForEach(mainViewModel.serveUnit(), id:\.self) { unit in
+                                    Text(unit).tag(unit)
+                                }
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                            .modifier(CustomPickerViewBlockDesign())
+                        }
                     }
+                    .frame(height: 100)
                     
+                    // Proteins
                     HStack(spacing: 20) {
                         Text("Proteins")
                             .modifier(CustomTextDesign())
@@ -51,6 +93,7 @@ struct MainVIew: View {
                             .modifier(CustomTextFieldStyle())
                     }
                     
+                    // Carbs
                     HStack(spacing: 20) {
                         Text("Carbs")
                             .modifier(CustomTextDesign())
@@ -60,6 +103,7 @@ struct MainVIew: View {
                             .modifier(CustomTextFieldStyle())
                     }
                     
+                    // Fats
                     HStack(spacing: 20) {
                         Text("Fats")
                             .modifier(CustomTextDesign())
@@ -70,10 +114,7 @@ struct MainVIew: View {
                     }
                 }
                 .padding(15)
-                .frame(width: UIScreen.main.bounds.width - 32, height: 500)
-                .background(Color.white)
-                .cornerRadius(15)
-                .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)
+                .modifier(CustomMainBlockDesign())
                 .padding(.bottom, 50)
                 
                 Button {
@@ -110,7 +151,10 @@ struct MainVIew: View {
 
 struct MainVIew_Previews: PreviewProvider {
     static var previews: some View {
-        MainVIew()
+        NavigationStack{
+            MainVIew()
+        }
+        .environmentObject(MainViewModel())
     }
 }
 

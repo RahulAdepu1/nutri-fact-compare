@@ -7,15 +7,34 @@
 
 import Foundation
 
-struct ServingSizeUnit: Identifiable {
+struct SolidServingSizeUnit: Identifiable {
     let id = UUID().uuidString
     let servUnit: String
     
     static let servingSizeUnitList = [
-        ServingSizeUnit(servUnit: "oz"),
-        ServingSizeUnit(servUnit: "mg"),
-        ServingSizeUnit(servUnit: "gm"),
-        ServingSizeUnit(servUnit: "ml"),
-        ServingSizeUnit(servUnit: "fl oz")
+        SolidServingSizeUnit(servUnit: "gm"),
+        SolidServingSizeUnit(servUnit: "oz"),
+        SolidServingSizeUnit(servUnit: "mg")
     ]
 }
+
+struct LiquidServingSizeUnit: Identifiable {
+    let id = UUID().uuidString
+    let servUnit: String
+    
+    static let servingSizeUnitList = [
+        LiquidServingSizeUnit(servUnit: "ml"),
+        LiquidServingSizeUnit(servUnit: "fl oz")
+    ]
+}
+
+struct ServingSizeUnitType: Identifiable {
+    let id = UUID().uuidString
+    let type: String
+    
+    static let servingSizeUnitList = [
+        ServingSizeUnitType(type: "solid"),
+        ServingSizeUnitType(type: "liquid")
+    ]
+}
+
