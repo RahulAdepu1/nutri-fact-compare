@@ -20,7 +20,7 @@ struct ResultView: View {
                         Text("Item 1")
                             .modifier(CustomTextLargeTitleDesign())
                         HStack {
-                            Text(mainViewModel.equalizeByServe()[8])
+                            Text(mainViewModel.equalizeByServe()[6])
                                 .modifier(CustomTextTitle3Design())
                             if (mainViewModel.servingSizeUnitType == "solid") {
                                 Text("g")
@@ -36,7 +36,7 @@ struct ResultView: View {
                         Text("Item 2")
                             .modifier(CustomTextLargeTitleDesign())
                         HStack{
-                            Text(mainViewModel.equalizeByServe()[9])
+                            Text(mainViewModel.equalizeByServe()[7])
                                 .modifier(CustomTextTitle3Design())
                             if (mainViewModel.servingSizeUnitType == "solid") {
                                 Text("g")
@@ -50,56 +50,27 @@ struct ResultView: View {
                 }
                 .padding(.horizontal, 10)
                 
-                // Price Compare
-                VStack {
-                    Text("Price")
-                        .modifier(CustomTextTitle2Design())
-                    HStack {
-                        Text("$ "+mainViewModel.equalizeByServe()[0])
-                            .modifier(CustomTextBodyDesign())
-                        Image(
-                            systemName: mainViewModel.diffValues()[4] == "true" ? "equal.circle.fill" :
-                                mainViewModel.diffValues()[5] == "true" ? "arrowtriangle.up.fill" : "arrowtriangle.down.fill" )
-                        .foregroundColor(mainViewModel.diffValues()[4] == "true" ? .blue :
-                                            mainViewModel.diffValues()[5] == "true" ? .green : .red )
-                        .modifier(CustomTextSymbolDesign())
-                        Text("$ "+mainViewModel.diffValues()[0])
-                            .modifier(CustomTextBodyDesign())
-                        Image(
-                            systemName: mainViewModel.diffValues()[4] == "true" ? "equal.circle.fill" :
-                                mainViewModel.diffValues()[5] == "true" ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill" )
-                        .foregroundColor(mainViewModel.diffValues()[4] == "true" ? .blue :
-                                            mainViewModel.diffValues()[5] == "true" ? .red : .green )
-                        .modifier(CustomTextSymbolDesign())
-                        Text("$ "+mainViewModel.equalizeByServe()[1])
-                            .modifier(CustomTextBodyDesign())
-                    }
-                }
-                .padding(.horizontal, 20)
-                .modifier(CustomBlockDesign())
-                
                 // Proteins Compare
-                
                 VStack {
                     Text("Proteins")
                     HStack {
-                        Text(mainViewModel.equalizeByServe()[2]+" g")
+                        Text(mainViewModel.equalizeByServe()[0]+" g")
                             .modifier(CustomTextBodyDesign())
                         Image(
-                            systemName: mainViewModel.diffValues()[6] == "true" ? "equal.circle.fill" :
-                                mainViewModel.diffValues()[7] == "true" ? "arrowtriangle.up.fill" : "arrowtriangle.down.fill" )
-                        .foregroundColor(mainViewModel.diffValues()[6] == "true" ? .blue :
-                                            mainViewModel.diffValues()[7] == "true" ? .green : .red )
+                            systemName: mainViewModel.diffValues()[3] == "true" ? "equal.circle.fill" :
+                                mainViewModel.diffValues()[4] == "true" ? "arrowtriangle.up.fill" : "arrowtriangle.down.fill" )
+                        .foregroundColor(mainViewModel.diffValues()[3] == "true" ? .blue :
+                                            mainViewModel.diffValues()[4] == "true" ? .green : .red )
                         .modifier(CustomTextSymbolDesign())
-                        Text(mainViewModel.diffValues()[1]+" g")
+                        Text(mainViewModel.diffValues()[0]+" g")
                             .modifier(CustomTextBodyDesign())
                         Image(
-                            systemName: mainViewModel.diffValues()[6] == "true" ? "equal.circle.fill" :
-                                mainViewModel.diffValues()[7] == "true" ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill" )
-                        .foregroundColor(mainViewModel.diffValues()[6] == "true" ? .blue :
-                                            mainViewModel.diffValues()[7] == "true" ? .red : .green )
+                            systemName: mainViewModel.diffValues()[3] == "true" ? "equal.circle.fill" :
+                                mainViewModel.diffValues()[4] == "true" ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill" )
+                        .foregroundColor(mainViewModel.diffValues()[3] == "true" ? .blue :
+                                            mainViewModel.diffValues()[4] == "true" ? .red : .green )
                         .modifier(CustomTextSymbolDesign())
-                        Text(mainViewModel.equalizeByServe()[3]+" g")
+                        Text(mainViewModel.equalizeByServe()[1]+" g")
                             .modifier(CustomTextBodyDesign())
                     }
                 }
@@ -110,23 +81,23 @@ struct ResultView: View {
                 VStack {
                     Text("Carbs")
                     HStack {
-                        Text(mainViewModel.equalizeByServe()[4]+" g")
+                        Text(mainViewModel.equalizeByServe()[2]+" g")
                             .modifier(CustomTextBodyDesign())
                         Image(
-                            systemName: mainViewModel.diffValues()[8] == "true" ? "equal.circle.fill" :
-                                mainViewModel.diffValues()[9] == "true" ? "arrowtriangle.up.fill" : "arrowtriangle.down.fill" )
-                        .foregroundColor(mainViewModel.diffValues()[8] == "true" ? .blue :
-                                            mainViewModel.diffValues()[9] == "true" ? .green : .red )
+                            systemName: mainViewModel.diffValues()[5] == "true" ? "equal.circle.fill" :
+                                mainViewModel.diffValues()[6] == "true" ? "arrowtriangle.up.fill" : "arrowtriangle.down.fill" )
+                        .foregroundColor(mainViewModel.diffValues()[5] == "true" ? .blue :
+                                            mainViewModel.diffValues()[6] == "true" ? .green : .red )
                         .modifier(CustomTextSymbolDesign())
-                        Text(mainViewModel.diffValues()[2]+" g")
+                        Text(mainViewModel.diffValues()[1]+" g")
                             .modifier(CustomTextBodyDesign())
                         Image(
-                            systemName: mainViewModel.diffValues()[8] == "true" ? "equal.circle.fill" :
-                                mainViewModel.diffValues()[9] == "true" ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill" )
-                        .foregroundColor(mainViewModel.diffValues()[8] == "true" ? .blue :
-                                            mainViewModel.diffValues()[9] == "true" ? .red : .green )
+                            systemName: mainViewModel.diffValues()[5] == "true" ? "equal.circle.fill" :
+                                mainViewModel.diffValues()[6] == "true" ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill" )
+                        .foregroundColor(mainViewModel.diffValues()[5] == "true" ? .blue :
+                                            mainViewModel.diffValues()[6] == "true" ? .red : .green )
                         .modifier(CustomTextSymbolDesign())
-                        Text(mainViewModel.equalizeByServe()[5]+" g")
+                        Text(mainViewModel.equalizeByServe()[3]+" g")
                             .modifier(CustomTextBodyDesign())
                     }
                 }
@@ -137,23 +108,23 @@ struct ResultView: View {
                 VStack {
                     Text("Fats")
                     HStack {
-                        Text(mainViewModel.equalizeByServe()[6]+" g")
+                        Text(mainViewModel.equalizeByServe()[4]+" g")
                             .modifier(CustomTextBodyDesign())
                         Image(
-                            systemName: mainViewModel.diffValues()[10] == "true" ? "equal.circle.fill" :
-                                mainViewModel.diffValues()[11] == "true" ? "arrowtriangle.up.fill" : "arrowtriangle.down.fill" )
-                        .foregroundColor(mainViewModel.diffValues()[10] == "true" ? .blue :
-                                            mainViewModel.diffValues()[11] == "true" ? .green : .red )
+                            systemName: mainViewModel.diffValues()[7] == "true" ? "equal.circle.fill" :
+                                mainViewModel.diffValues()[8] == "true" ? "arrowtriangle.up.fill" : "arrowtriangle.down.fill" )
+                        .foregroundColor(mainViewModel.diffValues()[7] == "true" ? .blue :
+                                            mainViewModel.diffValues()[8] == "true" ? .green : .red )
                         .modifier(CustomTextSymbolDesign())
-                        Text(mainViewModel.diffValues()[3]+" g")
+                        Text(mainViewModel.diffValues()[2]+" g")
                             .modifier(CustomTextBodyDesign())
                         Image(
-                            systemName: mainViewModel.diffValues()[10] == "true" ? "equal.circle.fill" :
-                                mainViewModel.diffValues()[11] == "true" ? "equal.down.fill" : "arrowtriangle.up.fill" )
-                        .foregroundColor(mainViewModel.diffValues()[10] == "true" ? .blue :
-                                            mainViewModel.diffValues()[11] == "true" ? .red : .green )
+                            systemName: mainViewModel.diffValues()[7] == "true" ? "equal.circle.fill" :
+                                mainViewModel.diffValues()[8] == "true" ? "equal.down.fill" : "arrowtriangle.up.fill" )
+                        .foregroundColor(mainViewModel.diffValues()[7] == "true" ? .blue :
+                                            mainViewModel.diffValues()[8] == "true" ? .red : .green )
                         .modifier(CustomTextSymbolDesign())
-                        Text(mainViewModel.equalizeByServe()[7]+" g")
+                        Text(mainViewModel.equalizeByServe()[5]+" g")
                             .modifier(CustomTextBodyDesign())
                     }
                 }
@@ -174,23 +145,6 @@ struct ResultView: View {
 
         }
     }
-    
-    func priceDifference() -> String {
-        return "$6"
-    }
-    
-    func proteinsDifference() -> String {
-        return "$6"
-    }
-    
-    func carbsDifference() -> String {
-        return "$6"
-    }
-    
-    func fatsDifference() -> String {
-        return "$6"
-    }
-    
 }
 
 struct ResultView_Previews: PreviewProvider {

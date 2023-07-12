@@ -40,16 +40,6 @@ struct MainVIew: View {
                             .modifier(CustomTextDesign())
                     }
                     
-                    // Price
-                    HStack(spacing: 20) {
-                        Text("Price")
-                            .modifier(CustomTextDesign())
-                        TextField("price", text: $mainViewModel.price1)
-                            .modifier(CustomTextFieldStyle())
-                        TextField("price", text: $mainViewModel.price2)
-                            .modifier(CustomTextFieldStyle())
-                    }
-                    
                     // Serving Size
                     HStack(spacing: 20) {
                         Text("Serv. Size")
@@ -119,8 +109,6 @@ struct MainVIew: View {
                 
                 Button {
                     // Clear all
-                    mainViewModel.price1 = ""
-                    mainViewModel.price2 = ""
                     mainViewModel.servSize1 = ""
                     mainViewModel.servSize2 = ""
                     mainViewModel.proteins1 = ""
@@ -160,9 +148,7 @@ struct MainVIew_Previews: PreviewProvider {
 
 extension MainVIew: DataEntryProtocol {
     var allDataEntered: Bool {
-        !mainViewModel.price1.isEmpty
-        && !mainViewModel.price2.isEmpty
-        && !mainViewModel.servSize1.isEmpty
+        !mainViewModel.servSize1.isEmpty
         && !mainViewModel.servSize2.isEmpty
         && !mainViewModel.proteins1.isEmpty
         && !mainViewModel.proteins2.isEmpty

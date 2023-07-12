@@ -175,7 +175,6 @@ class MainViewModel:ObservableObject {
             multiplier = calculateServingUnit1() / calculateServingUnit2()
             
             serveSize1 = getUnwrappedSize1()
-            priceCal1 = getUnwrappedPrice1()
             proteinsCal1 = getUnwrappedProtein1()
             carbsCal1 = getUnwrappedCarb1()
             fatsCal1 = getUnwrappedFat1()
@@ -183,7 +182,6 @@ class MainViewModel:ObservableObject {
             
             // Change the values based on multiplier
             serveSize2 = multiplier * getUnwrappedSize2()
-            priceCal2 = multiplier * getUnwrappedPrice2()
             proteinsCal2 = multiplier * getUnwrappedProtein2()
             carbsCal2 = multiplier * getUnwrappedCarb2()
             fatsCal2 = multiplier * getUnwrappedFat2()
@@ -193,73 +191,52 @@ class MainViewModel:ObservableObject {
             multiplier = calculateServingUnit2() / calculateServingUnit1()
             
             serveSize2 = getUnwrappedSize2()
-            priceCal2 = getUnwrappedPrice2()
             proteinsCal2 = getUnwrappedProtein2()
             carbsCal2 = getUnwrappedCarb2()
             fatsCal2 = getUnwrappedFat2()
             
             // Change the values based on multiplier
             serveSize1 = multiplier * getUnwrappedSize1()
-            priceCal1 = multiplier * getUnwrappedPrice1()
             proteinsCal1 = multiplier * getUnwrappedProtein1()
             carbsCal1 = multiplier * getUnwrappedCarb1()
             fatsCal1 = multiplier * getUnwrappedFat1()
             
         } else {
             serveSize1 = getUnwrappedSize1()
-            priceCal1 = getUnwrappedPrice1()
             proteinsCal1 = getUnwrappedProtein1()
             carbsCal1 = getUnwrappedCarb1()
             fatsCal1 = getUnwrappedFat1()
             
             serveSize2 = getUnwrappedSize2()
-            priceCal2 = getUnwrappedPrice2()
             proteinsCal2 = getUnwrappedProtein2()
             carbsCal2 = getUnwrappedCarb2()
             fatsCal2 = getUnwrappedFat2()
         }
         
         return [
-            priceCal1.doubleToString1decimal,      // 0
-            priceCal2.doubleToString1decimal,      // 1
-            proteinsCal1.doubleToString1decimal,   // 2
-            proteinsCal2.doubleToString1decimal,   // 3
-            carbsCal1.doubleToString1decimal,      // 4
-            carbsCal2.doubleToString1decimal,      // 5
-            fatsCal1.doubleToString1decimal,       // 6
-            fatsCal2.doubleToString1decimal,       // 7
-            serveSize1.doubleToString1decimal,     // 8
-            serveSize2.doubleToString1decimal      // 9
+            proteinsCal1.doubleToString1decimal,   // 0
+            proteinsCal2.doubleToString1decimal,   // 1
+            carbsCal1.doubleToString1decimal,      // 2
+            carbsCal2.doubleToString1decimal,      // 3
+            fatsCal1.doubleToString1decimal,       // 4
+            fatsCal2.doubleToString1decimal,       // 5
+            serveSize1.doubleToString1decimal,     // 6
+            serveSize2.doubleToString1decimal      // 7
         ]
     }
     
     func diffValues() -> [String] {
-        var priceDiff = 0.0
         var proteinsDiff = 0.0
         var carbsDiff = 0.0
         var fatsDiff = 0.0
         
-        var priceEqual = "false"
         var proteinsEqual = "false"
         var carbsEqual = "false"
         var fatsEqual = "false"
         
-        var price1High = "true"
         var proteins1High = "true"
         var carbs1High = "true"
         var fats1High = "true"
-
-        // If price 1 is greater than price 2
-        if equalizeByServe()[0].stringToDouble > equalizeByServe()[1].stringToDouble {
-            priceDiff = equalizeByServe()[0].stringToDouble - equalizeByServe()[1].stringToDouble
-            // If price 2 is bigger than price 1
-        } else if equalizeByServe()[1].stringToDouble > equalizeByServe()[0].stringToDouble {
-            price1High = "false"
-            priceDiff = equalizeByServe()[1].stringToDouble - equalizeByServe()[0].stringToDouble
-            // If price 1 is equal to price 2
-        } else {
-            priceEqual = "true"
-        }
 
         // If proteins 1 is greater than proteins 2
         if equalizeByServe()[2].stringToDouble > equalizeByServe()[3].stringToDouble {
@@ -299,22 +276,18 @@ class MainViewModel:ObservableObject {
 
 
         return [
-            priceDiff.doubleToString1decimal,      // 0
-            proteinsDiff.doubleToString1decimal,   // 1
-            carbsDiff.doubleToString1decimal,      // 2
-            fatsDiff.doubleToString1decimal,       // 3
+            proteinsDiff.doubleToString1decimal,   // 0
+            carbsDiff.doubleToString1decimal,      // 1
+            fatsDiff.doubleToString1decimal,       // 2
             
-            priceEqual,             // 4
-            price1High,             // 5
+            proteinsEqual,          // 3
+            proteins1High,          // 4
             
-            proteinsEqual,          // 6
-            proteins1High,          // 7
+            carbsEqual,             // 5
+            carbs1High,             // 6
             
-            carbsEqual,             // 8
-            carbs1High,             // 9
-            
-            fatsEqual,              // 10
-            fats1High,              // 11
+            fatsEqual,              // 7
+            fats1High,              // 8
         ]
     }
 }
